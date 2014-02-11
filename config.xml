@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "gr.liverios.elevator-demo"
+        id        = "gr.liverios.test-app"
         version   = "1.0.0">
 
     <name>Git App Test</name>
 
     <description>
-        Elevator Demo application.
+        Test application.
     </description>
 
     <author href="http://liverios.gr/" email="liberis3@gmail.com">
