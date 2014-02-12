@@ -8,11 +8,11 @@
 <script>
 function validateForm()
 {
-var name;
-name = document.getElementById("fname").value;
-localStorage.myname = name;
+var ecode;
+ecode = document.getElementById("code").value;
+localStorage.mycode = ecode;
 
-var x=document.forms["myForm"]["fname"].value;
+var x=document.forms["myForm"]["code"].value;
 if (x==null || x=="")
   {
   alert("First name must be filled out");
@@ -24,20 +24,108 @@ if (x==null || x=="")
 <body>
 
 <form name="myForm" onsubmit="return validateForm()" >
-First name: <input type="text" id="fname" name="fname">
+Code: <input type="text" id="code" name="code">
 <input type="submit" value="Submit">
 
 <br />
 <br />
 
 <script>
-document.write(localStorage.myname);
+document.write(localStorage.mycode);
 </script>
 
 <br />
 <br />
 
 <a href="hello.html"><b> next page </b></a>
+
+<br />
+<br />
+
+<script language="javascript" type="text/javascript">
+function callfunction() 
+{
+if (localStorage.mycode==1)
+  {
+  window.location.href = "tel:+2109999991";
+  }
+else if (localStorage.mycode==2)
+  {
+  window.location.href = "tel:+2109999992";
+  }
+else if (localStorage.mycode==3)
+  {
+  window.location.href = "tel:+2109999993";
+  }
+    
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+function mobilefunction() 
+{
+if (localStorage.mycode==1)
+  {
+  window.location.href = "tel:+6945999991";
+  }
+else if (localStorage.mycode==2)
+  {
+  window.location.href = "tel:+6945999992";
+  }
+else if (localStorage.mycode==3)
+  {
+  window.location.href = "tel:+6945999993";
+  }
+    
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+function smsfunction() 
+{
+if (localStorage.mycode==1)
+  {
+  window.location.href = "mailto:6945999991?body=Εγκλωβίστηκα στο ασανσέρ σας. Βοηθήστε με σας παρακαλώ!!!";
+  }
+else if (localStorage.mycode==2)
+  {
+  window.location.href = "mailto:6945999992?body=Εγκλωβίστηκα στο ασανσέρ σας. Βοηθήστε με σας παρακαλώ!!!";
+  }
+else if (localStorage.mycode==3)
+  {
+  window.location.href = "mailto:6945999993?body=Εγκλωβίστηκα στο ασανσέρ σας. Βοηθήστε με σας παρακαλώ!!!";
+  }
+    
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+function mailfunction() 
+{
+if (localStorage.mycode==1)
+  {
+  window.location.href = "mailto:overtestemail1@email.com?subject=Elevator&body=Εγκλωβίστηκα στο ασανσέρ σας. Βοηθήστε με σας παρακαλώ!!!";
+  }
+else if (localStorage.mycode==2)
+  {
+  window.location.href = "mailto:overtestemail2@email.com?subject=Elevator&body=Εγκλωβίστηκα στο ασανσέρ σας. Βοηθήστε με σας παρακαλώ!!!";
+  }
+else if (localStorage.mycode==3)
+  {
+  window.location.href = "mailto:overtestemail3@email.com?subject=Elevator&body=Εγκλωβίστηκα στο ασανσέρ σας. Βοηθήστε με σας παρακαλώ!!!";
+  }
+    
+}
+</script>
+
+<table border="0" bgcolor="#111111">
+<tr>
+ <td width="25%"><center><img src="images/call.png" width="100%" onclick="callfunction()"/></center></td>
+    <td width="25%"><center><img src="images/selfphone.png"  width="100%"  onclick="mobilefunction()"/></center></td>
+    <td width="25%"><center><img src="images/sms.png" width="100%" onclick="smsfunction()" /></center></td>
+    <td width="25%"><center><img src="images/mail.png" width="100%" onclick="mailfunction()" /></center></td>
+</tr>
+</table>
 
 </body>
 </html>
